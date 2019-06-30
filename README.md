@@ -1,23 +1,19 @@
 airbnb_optimization
 ==============================
 
-An attempt to find the best airbnb listing under price constraints.
+An attempt to find the best airbnb listing under price constraints. Project generated from <p><small><a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
-Project Organization
+Project Organization (Simplified/Modified structure from original template)
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
+    ├── README.md          <- Top-level README
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
     │   ├── processed      <- The final, canonical data sets for modeling.
+    │   ├── interim        <- Intermediate data that has been transformed/concatenated.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
+    ├── models             <- Models for `Best` Airbnb Listing under price constraints
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
@@ -26,32 +22,20 @@ Project Organization
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
-
-
+                              generated with `pip freeze > requirements.txt`
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+## Personal Checklist :rocket:
+- [ ] Data cleaning (extract relevant columns, deal with NAs & Outliers)
+- [ ] Data Exploration and Visualization (Play around with Plotly a bit)
+- [ ] Implement most basic model to mind -> Lagrangian Optimization with multiple constraints
+- [ ] Research optimization methods
+
+## Issues :anger:
+1. Currently no way to measure `performance` of model (since there isn't user feedback of the model) so choosing a model that's highly interpretable is preferable (reason for `Lagrangian`). However, I could use my trip to Cancún in March as a benchmark and compare my experience to model score output. Also, there is opportunity to use model for finding the `optimal` listing for trip to Toronto in August. 
+2. Not Automated. Prob look to connect `flask app takes input -> crawler -> s3 bucket -> data processing -> model ranking listings -> flask app output` in the future.
+3. Web scraping spider is not going to be reliable or ideal as Airbnb changes their site often (also has potential to harm the site). At this moment (June 30, 2019), Airbnb is not accepting new access requests for their API. *I really do hope* that access will be available for the future. 
+
+
