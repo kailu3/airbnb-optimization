@@ -1,9 +1,9 @@
 airbnb_optimization
 ==============================
 
-An attempt to find the best airbnb listing under price constraints. Project generated from <p><small><a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+An attempt to find the best airbnb listing under price constraints. Project generated from [cookie-cutter-data-science](https://drivendata.github.io/cookiecutter-data-science/)
 
-Project Organization (Simplified/Modified structure from original template)
+Project Organization
 ------------
 
     ├── LICENSE
