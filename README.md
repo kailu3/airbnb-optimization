@@ -13,11 +13,11 @@ Project Organization
     │   ├── interim        <- Intermediate data that has been transformed/concatenated.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── models             <- Models for `Best` Airbnb Listing under price constraints
+    ├── models             <- Models for Airbnb Listing Ranking under price constraints
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    │                         `kl-initial-data-exploration`.
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
